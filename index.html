@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reštaurácia Muškát · Piešťany</title>
+<meta name="description" content="Rodinná reštaurácia Muškát v Piešťanoch – slovenská a medzinárodná kuchyňa, denné obedové menu, rozvoz obedov, letná terasa, koliba s grilom a sedenie pri jazierku. Rezervujte si stôl online.">
+<meta name="theme-color" content="#b3263e">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Reštaurácia Muškát · Piešťany">
+<meta property="og:description" content="Poctivá kuchyňa, denné menu a záhradná terasa pri jazierku v srdci kúpeľných Piešťan.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23b3263e'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='32' cy='22' r='7'/%3E%3Ccircle cx='22' cy='32' r='7'/%3E%3Ccircle cx='42' cy='32' r='7'/%3E%3Ccircle cx='27' cy='42' r='7'/%3E%3Ccircle cx='37' cy='42' r='7'/%3E%3C/g%3E%3Ccircle cx='32' cy='33' r='4' fill='%23f6c453'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Reštaurácia Muškát",
+  "url": "https://www.restauraciamuskat.sk",
+  "telephone": "+421948037380",
+  "email": "info@restauraciamuskat.sk",
+  "servesCuisine": ["Slovenská", "Medzinárodná"],
+  "priceRange": "€€",
+  "acceptsReservations": "True",
+  "address": {"@type": "PostalAddress","streetAddress": "Sasinkova 28","addressLocality": "Piešťany","postalCode": "921 01","addressCountry": "SK"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"],"opens": "09:30","closes": "22:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Friday","opens": "09:30","closes": "23:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "10:00","closes": "23:00"}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --red:#b3263e; --red-2:#8f1a2f; --coral:#e8586b; --gold:#e9b949; --leaf:#2f5d46; --leaf-2:#244a37;
+  --bg:#fbf6ef; --bg-2:#f4ebdf; --card:#ffffff; --ink:#1f1a17; --muted:#6e625a; --line:#e7dccd;
+  --shadow:0 20px 50px -20px rgba(70,30,20,.25);
+  --radius:22px;
+  --serif:"Fraunces", Georgia, serif; --sans:"Manrope", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15110f; --bg-2:#1d1815; --card:#231d19; --ink:#f5ede4; --muted:#b5a89c; --line:#3a302a;
+    --shadow:0 20px 50px -20px rgba(0,0,0,.6); --coral:#ff7d8d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15110f; --bg-2:#1d1815; --card:#231d19; --ink:#f5ede4; --muted:#b5a89c; --line:#3a302a;
+  --shadow:0 20px 50px -20px rgba(0,0,0,.6); --coral:#ff7d8d; color-scheme: dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:clip}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.serif{font-family:var(--serif)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--red)}
+:root[data-theme="dark"] .eyebrow{color:var(--coral)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .eyebrow{color:var(--coral)}}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.5vw,3.3rem);margin:.6rem 0 1rem}
+h2 em{font-style:italic;color:var(--red);font-weight:400}
+.lead{color:var(--muted);font-size:1.08rem;max-width:62ch}
+section{padding:clamp(70px,10vw,120px) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.95rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;transition:transform .2s, box-shadow .2s, background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 30px -10px rgba(179,38,62,.7)}
+.btn-primary:hover{background:var(--red-2)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(8px)}
+.btn-line{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn-line:hover{border-color:var(--red);color:var(--red)}
+.btn svg{width:18px;height:18px}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:.2rem .55rem;border-radius:999px;background:var(--bg-2);color:var(--muted)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}*{animation:none!important}}
+
+/* topbar + nav */
+.topbar{background:var(--leaf-2);color:#e9f1ec;font-size:.85rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.5rem 0}
+.topbar a{text-decoration:none}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:#7bd88f;box-shadow:0 0 0 0 rgba(123,216,143,.7);animation:pulse 2s infinite}
+.dot.closed{background:#ff8a8a;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(123,216,143,0)}100%{box-shadow:0 0 0 0 rgba(123,216,143,0)}}
+.topbar-right{display:flex;align-items:center;gap:1rem}
+.lang{display:flex;gap:2px;background:rgba(255,255,255,.1);border-radius:999px;padding:2px}
+.lang button{background:none;border:0;padding:.2rem .6rem;border-radius:999px;cursor:pointer;font-size:.75rem;font-weight:700;color:#e9f1ec}
+.lang button.on{background:#fff;color:var(--leaf-2)}
+.theme-btn{background:none;border:0;cursor:pointer;color:#e9f1ec;display:grid;place-items:center}
+.theme-btn svg{width:18px;height:18px}
+.hide-sm{display:inline}
+@media (max-width:640px){.hide-sm{display:none}}
+
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid transparent;transition:border-color .3s, box-shadow .3s}
+header.nav.scrolled{border-color:var(--line);box-shadow:0 8px 30px -18px rgba(0,0,0,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.logo svg{width:42px;height:42px;flex:none}
+.logo b{font-family:var(--serif);font-size:1.5rem;font-weight:700;letter-spacing:.02em;display:block;line-height:1}
+.logo small{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.menu-links{display:flex;gap:1.6rem;list-style:none}
+.menu-links a{text-decoration:none;font-weight:600;font-size:.95rem;position:relative;padding:.3rem 0}
+.menu-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--red);transition:width .25s}
+.menu-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:.6rem}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;border-radius:12px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px auto;border-radius:2px;transition:.3s}
+@media (max-width:1020px){
+  .menu-links{position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:var(--bg);padding:1rem 16px 2rem;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s ease;box-shadow:var(--shadow)}
+  .menu-links.open{transform:none}
+  .menu-links a{display:block;padding:.9rem 0;font-size:1.15rem;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .nav-cta .btn{padding:.7rem 1.1rem;font-size:.9rem}
+}
+@media (max-width:420px){.nav-cta .btn{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,880px);display:flex;align-items:flex-end;color:#fff;padding:0 0 clamp(40px,7vw,80px);overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(135deg,#5b1422,#2f5d46) center/cover;transform:scale(1.08);animation:kenburns 22s ease-in-out infinite alternate}
+.hero-bg::after{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=2000&q=80") center/cover}
+@keyframes kenburns{to{transform:scale(1.0) translate(-1%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,10,8,.35) 0%,rgba(20,10,8,.15) 35%,rgba(20,10,8,.85) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:2.5rem;align-items:end}
+.hero h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:600;margin:1rem 0 1.2rem;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:400;color:#ffc9cf}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:54ch;color:rgba(255,255,255,.88)}
+.hero .eyebrow{color:#ffd9de}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(18px) saturate(1.3);border-radius:var(--radius);padding:1.5rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.hero-card h3{font-size:1.25rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.hero-card .price{font-family:var(--sans);font-weight:700;background:var(--gold);color:#3a2a00;border-radius:999px;padding:.2rem .7rem;font-size:.85rem}
+.hero-card ul{list-style:none;margin:1rem 0;display:grid;gap:.55rem}
+.hero-card li{display:flex;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.92)}
+.hero-card li b{color:var(--gold);font-weight:700;min-width:1.4rem}
+.hero-card a{color:#fff;font-weight:700;font-size:.9rem}
+.hero-scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.6);border-radius:20px}
+.hero-scroll::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:scroll 1.8s infinite}
+@keyframes scroll{to{transform:translateY(14px);opacity:0}}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:120px}.hero-scroll{display:none}}
+
+/* marquee */
+.marquee{background:var(--red);color:#fff;overflow:hidden;padding:1rem 0;font-family:var(--serif);font-size:1.35rem;font-style:italic}
+.marquee-track{display:flex;gap:3rem;width:max-content;animation:marq 40s linear infinite}
+.marquee span{display:flex;align-items:center;gap:3rem;white-space:nowrap}
+.marquee span::after{content:"✿";font-style:normal;color:var(--gold)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.about-media{position:relative;aspect-ratio:4/5}
+.about-media .ph{position:absolute;border-radius:var(--radius);box-shadow:var(--shadow);background-size:cover;background-position:center}
+.ph{background-color:var(--bg-2);background-image:linear-gradient(135deg,#c86b4a,#7a2232)}
+.about-media .a{inset:0 22% 18% 0;background-image:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=80"),linear-gradient(135deg,#c86b4a,#7a2232)}
+.about-media .b{inset:46% 0 0 38%;border:8px solid var(--bg);background-image:url("https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=80"),linear-gradient(135deg,#d99a3d,#8a3a1a)}
+.about-badge{position:absolute;left:-10px;bottom:6%;background:var(--leaf);color:#fff;border-radius:50%;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-family:var(--serif);box-shadow:var(--shadow);animation:spin 30s linear infinite}
+.about-badge b{display:block;font-size:2.2rem;line-height:1}
+.about-badge small{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+@keyframes spin{from{rotate:-8deg}50%{rotate:8deg}to{rotate:-8deg}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.1rem}
+.stat b{font-family:var(--serif);font-size:2.2rem;color:var(--red);display:block;line-height:1.1}
+:root[data-theme="dark"] .stat b{color:var(--coral)}
+.stat span{font-size:.88rem;color:var(--muted)}
+.features{display:grid;gap:.9rem;margin-top:1.8rem;list-style:none}
+.features li{display:flex;gap:.8rem;align-items:flex-start}
+.features svg{flex:none;width:24px;height:24px;color:var(--leaf);margin-top:2px}
+:root[data-theme="dark"] .features svg{color:#7bd88f}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.about-media{max-width:520px}}
+@media (max-width:480px){.stats{grid-template-columns:1fr 1fr 1fr;gap:.5rem}.stat{padding:.8rem}.stat b{font-size:1.6rem}}
+
+/* daily menu */
+.daily{background:var(--bg-2)}
+.daily-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
+.days{display:flex;gap:.5rem;flex-wrap:wrap;margin:2rem 0 1.5rem}
+.days button{border:1.5px solid var(--line);background:var(--card);border-radius:14px;padding:.6rem 1rem;cursor:pointer;font-weight:700;display:flex;flex-direction:column;align-items:center;line-height:1.2;min-width:78px;transition:.2s}
+.days button small{font-weight:500;color:var(--muted);font-size:.75rem}
+.days button.on{background:var(--red);border-color:var(--red);color:#fff}
+.days button.on small{color:#ffd9de}
+.days button .today{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.daily-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1fr 340px}
+.daily-list{padding:clamp(1.4rem,3vw,2.4rem)}
+.dish{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;padding:1rem 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.dish:last-child{border:0}
+.dish .num{font-family:var(--serif);font-size:1.1rem;color:var(--red);font-weight:700;width:2rem}
+.dish h4{font-size:1.05rem;font-weight:700}
+.dish p{font-size:.85rem;color:var(--muted)}
+.dish .pr{font-weight:800;white-space:nowrap}
+.allg{font-size:.72rem;color:var(--muted);margin-left:.3rem;font-weight:500}
+.daily-side{background:linear-gradient(160deg,var(--leaf),var(--leaf-2));color:#fff;padding:2rem;display:flex;flex-direction:column;gap:1rem;justify-content:space-between;position:relative;overflow:hidden}
+.daily-side::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;background:rgba(255,255,255,.07)}
+.daily-side h3{font-size:1.6rem}
+.daily-side p{color:rgba(255,255,255,.85);font-size:.95rem}
+.daily-side .btn{background:#fff;color:var(--leaf-2)}
+.big-time{font-family:var(--serif);font-size:2.4rem;line-height:1}
+.note{font-size:.78rem;color:var(--muted);margin-top:1rem}
+@media (max-width:860px){.daily-card{grid-template-columns:1fr}}
+
+/* a la carte */
+.carte-tools{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:2rem 0}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--card);padding:.5rem 1rem;border-radius:999px;cursor:pointer;font-weight:600;font-size:.9rem;transition:.2s}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.search{position:relative;flex:1;max-width:320px;min-width:200px}
+.search input{width:100%;padding:.7rem 1rem .7rem 2.6rem;border-radius:999px;border:1.5px solid var(--line);background:var(--card)}
+.search svg{position:absolute;left:.9rem;top:50%;translate:0 -50%;width:18px;height:18px;color:var(--muted)}
+.filters{display:flex;gap:.4rem;flex-wrap:wrap}
+.filters label{display:inline-flex;align-items:center;gap:.35rem;font-size:.85rem;font-weight:600;cursor:pointer;padding:.35rem .7rem;border-radius:999px;background:var(--bg-2)}
+.filters input{accent-color:var(--red)}
+.carte-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 2.5rem}
+.item{display:grid;grid-template-columns:76px 1fr;gap:1rem;padding:1rem;border-radius:18px;transition:background .2s}
+.item:hover{background:var(--card)}
+.item .thumb{width:76px;height:76px;border-radius:16px;background-size:cover;background-position:center}
+.item-top{display:flex;align-items:baseline;gap:.6rem}
+.item-top h4{font-size:1.05rem;font-weight:700}
+.item-top .fill{flex:1;border-bottom:2px dotted var(--line);translate:0 -4px}
+.item-top .pr{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--red);white-space:nowrap}
+:root[data-theme="dark"] .item-top .pr{color:var(--coral)}
+.item p{font-size:.88rem;color:var(--muted)}
+.item .meta{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.35rem}
+.ico{font-size:.72rem;font-weight:700;padding:.12rem .5rem;border-radius:999px}
+.ico.v{background:#e3f3e7;color:#22663a}.ico.gf{background:#fff1d6;color:#8a5a00}.ico.hot{background:#ffe1e1;color:#a11d1d}.ico.chef{background:#f2e6ff;color:#5b2a91}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem}
+.allergens-btn{background:none;border:0;color:var(--red);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:820px){.carte-grid{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{background:#1a1412;color:#f5ede4}
+.gallery .lead{color:#c9bbb0}
+.gallery h2 em{color:#ff9aa7}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:1rem;margin-top:2.5rem}
+.bento button{border:0;padding:0;border-radius:20px;overflow:hidden;position:relative;cursor:zoom-in;background:#2a211d}
+.bento .img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s}
+.bento button:hover .img{transform:scale(1.06)}
+.bento .cap{position:absolute;left:0;right:0;bottom:0;padding:1rem;text-align:left;font-weight:700;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff}
+.bento .cap small{display:block;font-weight:500;opacity:.8;font-size:.8rem}
+.bento .w2{grid-column:span 2}.bento .h2{grid-row:span 2}
+@media (max-width:860px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}}
+@media (max-width:480px){.bento{grid-auto-rows:150px;gap:.6rem}}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,6,5,.92);display:none;place-items:center;padding:16px}
+.lightbox.open{display:grid}
+.lightbox .img{width:min(1100px,100%);aspect-ratio:3/2;max-height:80vh;border-radius:18px;background-size:cover;background-position:center}
+.lightbox p{color:#fff;text-align:center;margin-top:1rem;font-family:var(--serif);font-size:1.3rem}
+.lb-close,.lb-nav{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:1.4rem}
+.lb-close{top:16px;right:16px}.lb-prev{left:16px;top:50%}.lb-next{right:16px;top:50%}
+
+/* events */
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.ev{position:relative;border-radius:var(--radius);overflow:hidden;min-height:300px;color:#fff;display:flex;align-items:flex-end;padding:1.5rem;isolation:isolate;box-shadow:var(--shadow)}
+.ev .img{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform .7s}
+.ev:hover .img{transform:scale(1.05)}
+.ev::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(20,8,6,.88))}
+.ev h3{font-size:1.5rem}
+.ev p{font-size:.9rem;opacity:.88}
+@media (max-width:860px){.events-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.events-grid{grid-template-columns:1fr}.ev{min-height:220px}}
+
+/* services strip */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden}
+.svc .icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:var(--bg-2);color:var(--red);margin-bottom:1.2rem}
+.svc .icon svg{width:28px;height:28px}
+.svc h3{font-size:1.45rem;margin-bottom:.5rem}
+.svc p{color:var(--muted);font-size:.95rem}
+.svc .btn{margin-top:1.3rem}
+.svc.feature{background:linear-gradient(150deg,var(--red),var(--red-2));color:#fff;border:0}
+.svc.feature p{color:rgba(255,255,255,.85)}
+.svc.feature .icon{background:rgba(255,255,255,.15);color:#fff}
+.voucher{margin-top:1.3rem;aspect-ratio:1.75;border-radius:16px;background:linear-gradient(135deg,#f6d27a,#e9b949 50%,#c9952a);color:#3a2a00;padding:1rem 1.2rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);transform:rotate(-3deg);transition:transform .4s}
+.svc:hover .voucher{transform:rotate(0) scale(1.03)}
+.voucher b{font-family:var(--serif);font-size:1.6rem}
+.voucher div{display:flex;justify-content:space-between;align-items:end;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:900px){.services{grid-template-columns:1fr}}
+.steps{display:grid;gap:.8rem;margin-top:1rem;list-style:none;counter-reset:s}
+.steps li{display:flex;gap:.8rem;align-items:center;font-size:.92rem;color:var(--muted)}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--bg-2);color:var(--red);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+
+/* reservation */
+.reserve{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+.res-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.res-info{position:sticky;top:110px}
+.res-info .ph{aspect-ratio:4/3;border-radius:var(--radius);margin-top:2rem;background-size:cover;background-position:center;background-image:url("https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1000&q=80"),linear-gradient(135deg,#2f5d46,#7a2232)}
+form.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(1.4rem,3vw,2.4rem);border:1px solid var(--line)}
+.field{display:grid;gap:.4rem;margin-bottom:1.1rem}
+.field label,.lbl{font-weight:700;font-size:.85rem}
+.field input,.field select,.field textarea{width:100%;padding:.85rem 1rem;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:14px;background:var(--bg);overflow:hidden}
+.stepper button{border:0;background:none;width:48px;height:48px;font-size:1.3rem;cursor:pointer;color:var(--red);font-weight:700}
+.stepper output{flex:1;text-align:center;font-weight:800;font-size:1.1rem}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:.45rem}
+.slots button{border:1.5px solid var(--line);background:var(--bg);padding:.55rem 0;border-radius:12px;cursor:pointer;font-weight:700;font-size:.9rem}
+.slots button.on{background:var(--red);color:#fff;border-color:var(--red)}
+.slots button:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.areas label{border:1.5px solid var(--line);border-radius:14px;padding:.8rem .5rem;text-align:center;cursor:pointer;font-weight:700;font-size:.88rem;background:var(--bg);transition:.2s}
+.areas label span{display:block;font-size:1.4rem}
+.areas input{position:absolute;opacity:0;pointer-events:none}
+.areas label:has(input:checked){border-color:var(--red);background:color-mix(in srgb,var(--red) 10%,var(--bg))}
+.areas label:has(input:focus-visible){outline:2px solid var(--red);outline-offset:2px}
+.consent{display:flex;gap:.6rem;font-size:.82rem;color:var(--muted);margin:.4rem 0 1.2rem;align-items:flex-start}
+.consent input{margin-top:3px;accent-color:var(--red)}
+.success{display:none;text-align:center;padding:2rem 1rem}
+.success.show{display:block}
+.success .check{width:76px;height:76px;margin:0 auto 1rem;border-radius:50%;background:#e3f3e7;color:#22663a;display:grid;place-items:center}
+.success .check svg{width:40px;height:40px}
+.summary{background:var(--bg-2);border-radius:14px;padding:1rem;margin:1rem auto;max-width:360px;text-align:left;font-size:.92rem}
+@media (max-width:900px){.res-grid{grid-template-columns:1fr}.res-info{position:static}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem}
+details{border-bottom:1px solid var(--line);padding:1.2rem 0}
+summary{cursor:pointer;font-weight:700;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--red);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:.7rem}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:1rem}}
+
+/* contact */
+.contact{background:var(--bg-2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:1.5rem}
+.c-card{background:var(--card);border-radius:var(--radius);padding:clamp(1.4rem,3vw,2.2rem);border:1px solid var(--line)}
+.c-line{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.c-line:last-of-type{border:0}
+.c-line .ic{width:44px;height:44px;flex:none;border-radius:12px;background:var(--bg-2);color:var(--red);display:grid;place-items:center}
+.c-line .ic svg{width:22px;height:22px}
+.c-line small{display:block;color:var(--muted);font-size:.8rem;font-weight:600}
+.c-line a,.c-line b{font-weight:700;text-decoration:none;font-size:1.05rem}
+.hours{width:100%;border-collapse:collapse;margin-top:1rem}
+.hours td{padding:.55rem .2rem;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--red);font-weight:800}
+:root[data-theme="dark"] .hours tr.today td{color:var(--coral)}
+.map{border-radius:var(--radius);overflow:hidden;min-height:420px;border:1px solid var(--line);background:var(--card);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.socials{display:flex;gap:.6rem;margin-top:1.2rem}
+.socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--bg-2);color:var(--ink);transition:.2s}
+.socials a:hover{background:var(--red);color:#fff}
+.socials svg{width:20px;height:20px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}.map{min-height:320px}}
+
+/* newsletter + footer */
+.news{background:var(--red);color:#fff;border-radius:28px;padding:clamp(2rem,5vw,3.5rem);display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;position:relative;overflow:hidden;margin-top:-60px;z-index:2;box-shadow:var(--shadow)}
+.news::before{content:"✿";position:absolute;font-size:22rem;line-height:1;right:-40px;top:-90px;opacity:.08}
+.news h3{font-size:clamp(1.6rem,3vw,2.3rem)}
+.news p{opacity:.88}
+.news form{display:flex;gap:.5rem;background:#fff;border-radius:999px;padding:.35rem}
+.news input{flex:1;min-width:0;border:0;padding:.6rem 1rem;background:transparent;color:#1f1a17;outline:none}
+.news .btn{background:var(--ink);color:#fff;padding:.75rem 1.2rem}
+:root[data-theme="dark"] .news .btn{background:#1f1a17}
+@media (max-width:760px){.news{grid-template-columns:1fr}}
+footer{background:#120d0b;color:#bfb2a6;padding:120px 0 40px;margin-top:-60px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+footer h4{color:#fff;font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+footer ul{list-style:none;display:grid;gap:.4rem;font-size:.92rem}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.f-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid #2a211d;margin-top:3rem;padding-top:1.5rem;font-size:.82rem}
+footer .logo b{color:#fff}
+@media (max-width:860px){.f-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.f-grid{grid-template-columns:1fr}}
+
+/* mobile action bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;grid-template-columns:1fr 1fr 1.3fr;gap:.4rem;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:20px;padding:.4rem;box-shadow:0 20px 40px -10px rgba(0,0,0,.35);padding-bottom:calc(.4rem + env(safe-area-inset-bottom))}
+.mbar a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-size:.72rem;font-weight:700;padding:.45rem;border-radius:14px}
+.mbar a svg{width:20px;height:20px}
+.mbar a.main{background:var(--red);color:#fff;flex-direction:row;justify-content:center;font-size:.9rem;gap:.4rem}
+@media (max-width:760px){.mbar{display:grid}body{padding-bottom:84px}}
+
+/* modal */
+dialog{border:0;border-radius:var(--radius);padding:0;max-width:min(560px,calc(100% - 32px));background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(10,6,5,.6);backdrop-filter:blur(4px)}
+.dlg{padding:2rem}
+.dlg h3{font-size:1.6rem;margin-bottom:1rem}
+.dlg ol{columns:2;gap:2rem;font-size:.92rem;padding-left:1.4rem;color:var(--muted)}
+.dlg .btn{margin-top:1.5rem}
+.toast{position:fixed;left:50%;bottom:110px;translate:-50% 20px;background:var(--ink);color:var(--bg);padding:.8rem 1.3rem;border-radius:999px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:120}
+.toast.show{opacity:1;translate:-50% 0}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:200;background:var(--card);padding:.6rem 1rem;border-radius:10px}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Preskočiť na obsah</a>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="status"><span class="dot" id="statusDot"></span><span id="statusText">Otvorené</span></span>
+    <div class="topbar-right">
+      <a class="hide-sm" href="tel:+421948037380">+421 948 037 380</a>
+      <span class="hide-sm">·</span>
+      <a class="hide-sm" href="#kontakt">Sasinkova 28, Piešťany</a>
+      <div class="lang" role="group" aria-label="Jazyk">
+        <button data-lang="sk" class="on">SK</button><button data-lang="en">EN</button><button data-lang="de">DE</button>
+      </div>
+      <button class="theme-btn" id="themeBtn" aria-label="Prepnúť tmavý režim">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Reštaurácia Muškát – domov">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#b3263e"/><g fill="#fff"><circle cx="32" cy="21" r="7.5"/><circle cx="21" cy="31" r="7.5"/><circle cx="43" cy="31" r="7.5"/><circle cx="26" cy="43" r="7.5"/><circle cx="38" cy="43" r="7.5"/></g><circle cx="32" cy="33" r="4.5" fill="#e9b949"/></svg>
+      <span><b>MUŠKÁT</b><small data-i18n="logoSub">Reštaurácia · Piešťany</small></span>
+    </a>
+    <ul class="menu-links" id="menuLinks">
+      <li><a href="#denne-menu" data-i18n="nav1">Denné menu</a></li>
+      <li><a href="#jedalny-listok" data-i18n="nav2">Jedálny lístok</a></li>
+      <li><a href="#terasa" data-i18n="nav3">Terasa & koliba</a></li>
+      <li><a href="#oslavy" data-i18n="nav4">Oslavy</a></li>
+      <li><a href="#rozvoz" data-i18n="nav5">Rozvoz</a></li>
+      <li><a href="#kontakt" data-i18n="nav6">Kontakt</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#rezervacia" class="btn btn-primary" data-i18n="ctaReserve">Rezervovať stôl</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="heroEyebrow">Rodinná reštaurácia v kúpeľných Piešťanoch</span>
+      <h1 data-i18n-html="heroTitle">Poctivá kuchyňa,<br><em>záhrada plná</em> muškátov.</h1>
+      <p data-i18n="heroText">Slovenské klasiky aj medzinárodné špeciality, denné obedové menu a letná terasa s kolibou a grilom pri záhradnom jazierku. Kúsok od centra, ďaleko od zhonu.</p>
+      <div class="hero-actions">
+        <a href="#rezervacia" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="ctaReserve">Rezervovať stôl</span></a>
+        <a href="#jedalny-listok" class="btn btn-ghost" data-i18n="heroMenu">Pozrieť jedálny lístok</a>
+      </div>
+    </div>
+    <aside class="hero-card reveal" aria-label="Dnešné menu">
+      <h3><span data-i18n="todayMenu">Dnešné obedové menu</span><span class="price" id="heroPrice">8,90 €</span></h3>
+      <ul id="heroDaily"></ul>
+      <a href="#denne-menu" data-i18n="fullWeek">Celý týždeň →</a>
+    </aside>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span data-i18n="mq1">Denné obedové menu</span><span data-i18n="mq2">Letná terasa</span><span data-i18n="mq3">Koliba s grilom</span><span data-i18n="mq4">Sedenie pri jazierku</span><span data-i18n="mq5">Rodinné oslavy</span><span data-i18n="mq6">Rozvoz obedov</span>
+    <span data-i18n="mq1">Denné obedové menu</span><span data-i18n="mq2">Letná terasa</span><span data-i18n="mq3">Koliba s grilom</span><span data-i18n="mq4">Sedenie pri jazierku</span><span data-i18n="mq5">Rodinné oslavy</span><span data-i18n="mq6">Rozvoz obedov</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="o-nas">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <div class="ph a"></div>
+      <div class="ph b"></div>
+      <div class="about-badge"><div><b>95</b><small data-i18n="seats">miest na sedenie</small></div></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="aboutEyebrow">O nás</span>
+      <h2 data-i18n-html="aboutTitle">Miesto, kam sa <em>radi vraciate</em></h2>
+      <p class="lead" data-i18n="aboutText">Muškát je rodinná reštaurácia v širšom centre Piešťan. Varíme to, čo máme sami radi – poctivé slovenské jedlá, steaky z grilu, čerstvé ryby a sezónne špeciality. Cez týždeň vás potešíme rýchlym a chutným obedom, cez víkend posedením s rodinou a priateľmi.</p>
+      <ul class="features">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="f1">Slovenská a medzinárodná kuchyňa doplnená kulinárskymi špecialitami</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="f2">Terasa s ratanovým nábytkom, zeleňou a samozrejme muškátmi</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="f3">Štýlová koliba s grilom a posedenie pri záhradnom jazierku</span></li>
+      </ul>
+      <div class="stats">
+        <div class="stat"><b data-count="45">0</b><span data-i18n="st1">miest vnútri</span></div>
+        <div class="stat"><b data-count="50">0</b><span data-i18n="st2">miest na terase</span></div>
+        <div class="stat"><b>7/7</b><span data-i18n="st3">otvorené každý deň</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY MENU -->
+<section class="daily" id="denne-menu">
+  <div class="wrap">
+    <div class="daily-head reveal">
+      <div>
+        <span class="eyebrow" data-i18n="dailyEyebrow">Pondelok – Piatok · 11:00 – 14:00</span>
+        <h2 data-i18n-html="dailyTitle">Denné <em>obedové</em> menu</h2>
+        <p class="lead" data-i18n="dailyText">Každý deň polievka a výber hlavných jedál. Najesť sa môžete u nás, zobrať si so sebou alebo si obed nechať doviezť.</p>
+      </div>
+      <button class="btn btn-line" id="shareMenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg><span data-i18n="share">Zdieľať menu</span></button>
+    </div>
+    <div class="days" id="days" role="tablist"></div>
+    <div class="daily-card reveal">
+      <div class="daily-list" id="dailyList" role="tabpanel"></div>
+      <div class="daily-side">
+        <div>
+          <span class="tag" style="background:rgba(255,255,255,.15);color:#fff" data-i18n="delivery">Rozvoz obedov</span>
+          <h3 style="margin-top:.8rem" data-i18n="deliveryTitle">Obed až k vám do práce</h3>
+          <p data-i18n="deliveryText">Objednávky prijímame telefonicky, rozvážame v čase obedov.</p>
+        </div>
+        <div>
+          <div class="big-time">11:00 – 14:00</div>
+          <p style="margin:.4rem 0 1rem" data-i18n="deliveryHint">Objednajte do 10:30 a máte istotu.</p>
+          <a href="tel:+421948037380" class="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-i18n="orderCall">Objednať telefonicky</span></a>
+        </div>
+      </div>
+    </div>
+    <p class="note" data-i18n="allgNote">Čísla pri jedlách označujú alergény. Na požiadanie vám radi poradíme.</p>
+  </div>
+</section>
+
+<!-- A LA CARTE -->
+<section id="jedalny-listok">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="carteEyebrow">À la carte</span>
+      <h2 data-i18n-html="carteTitle">Jedálny <em>lístok</em></h2>
+      <p class="lead" data-i18n="carteText">Od bruschetty na úvod až po hovädzí steak s bylinkovým maslom. Filtrujte podľa chuti a stravovacích potrieb.</p>
+    </div>
+    <div class="carte-tools">
+      <div class="chips" id="cats"></div>
+      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" id="q" placeholder="Hľadať jedlo…" data-i18n-ph="search" aria-label="Hľadať jedlo"></label>
+    </div>
+    <div class="filters" style="margin:-1rem 0 1.5rem">
+      <label><input type="checkbox" value="v"> <span data-i18n="fV">🌱 Vegetariánske</span></label>
+      <label><input type="checkbox" value="gf"> <span data-i18n="fGF">🌾 Bez lepku</span></label>
+      <label><input type="checkbox" value="chef"> <span data-i18n="fChef">⭐ Odporúčame</span></label>
+      <button class="allergens-btn" id="allgBtn" data-i18n="allgList">Zoznam alergénov</button>
+    </div>
+    <div class="carte-grid" id="carte"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="terasa">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#ff9aa7" data-i18n="galEyebrow">Letná sezóna</span>
+      <h2 data-i18n-html="galTitle">Terasa, koliba <em>a jazierko</em></h2>
+      <p class="lead" data-i18n="galText">Keď sa oteplí, život sa presúva von. Sadnite si na terasu vo dvore, do kolibky so štýlovým grilom alebo k záhradnému jazierku.</p>
+    </div>
+    <div class="bento" id="bento"></div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="oslavy">
+  <div class="wrap">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap">
+      <div>
+        <span class="eyebrow" data-i18n="evEyebrow">Oslavy & akcie</span>
+        <h2 data-i18n-html="evTitle">Vaše výnimočné chvíle, <em>naša starosť</em></h2>
+        <p class="lead" data-i18n="evText">Pripravíme rodinnú oslavu, firemný večierok aj svadbu. Menu na mieru, výzdobu a obsluhu nechajte na nás.</p>
+      </div>
+      <a href="#rezervacia" class="btn btn-primary" data-action="event" data-i18n="evCta">Nezáväzný dopyt</a>
+    </div>
+    <div class="events-grid">
+      <article class="ev reveal"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80'),linear-gradient(135deg,#c86b4a,#7a2232)"></div><div><h3 data-i18n="ev1">Svadby</h3><p data-i18n="ev1t">Menšie svadby a hostiny v záhradnej atmosfére.</p></div></article>
+      <article class="ev reveal"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80'),linear-gradient(135deg,#e9b949,#b3263e)"></div><div><h3 data-i18n="ev2">Krstiny & jubileá</h3><p data-i18n="ev2t">Rodinné oslavy so všetkým, čo k nim patrí.</p></div></article>
+      <article class="ev reveal"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=900&q=80'),linear-gradient(135deg,#2f5d46,#1f1a17)"></div><div><h3 data-i18n="ev3">Firemné akcie</h3><p data-i18n="ev3t">Večierky, pracovné obedy a teambuildingy pri grile.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="rozvoz" style="padding-top:0">
+  <div class="wrap services">
+    <div class="svc reveal">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h-2v-11h11v11"/><path d="M14 9h4l3 3v5h-2"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/></svg></div>
+      <h3 data-i18n="s1">Rozvoz obedov</h3>
+      <p data-i18n="s1t">Denné menu doručíme v Piešťanoch priamo k vám.</p>
+      <ol class="steps"><li data-i18n="s1a">Vyberte si z denného menu</li><li data-i18n="s1b">Zavolajte na 0948 037 380</li><li data-i18n="s1c">Obed prinesieme medzi 11:00 – 14:00</li></ol>
+    </div>
+    <div class="svc feature reveal">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></div>
+      <h3 data-i18n="s2">Darčekové poukážky</h3>
+      <p data-i18n="s2t">Darujte zážitok. Poukážku v hodnote podľa vášho výberu pripravíme do druhého dňa.</p>
+      <div class="voucher"><b>Muškát</b><div><span data-i18n="voucher">Darčeková poukážka</span><span style="font-family:var(--serif);font-size:1.4rem;letter-spacing:0">50 €</span></div></div>
+    </div>
+    <div class="svc reveal">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg></div>
+      <h3 data-i18n="s3">Raňajky & káva</h3>
+      <p data-i18n="s3t">Otvárame už o 9:30 – zastavte sa na kávu, dezert či neskoré raňajky po procedúrach v kúpeľoch.</p>
+      <a href="#jedalny-listok" class="btn btn-line" data-i18n="s3c">Nápojový lístok</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="reserve" id="rezervacia">
+  <div class="wrap res-grid">
+    <div class="res-info reveal">
+      <span class="eyebrow" data-i18n="resEyebrow">Online rezervácia</span>
+      <h2 data-i18n-html="resTitle">Rezervujte si <em>stôl</em></h2>
+      <p class="lead" data-i18n="resText">Vyberte dátum, čas a miesto, kde chcete sedieť. Rezerváciu vám potvrdíme e-mailom alebo telefonicky. Pre skupiny nad 12 osôb nás prosím kontaktujte priamo.</p>
+      <div class="ph"></div>
+    </div>
+    <form class="card reveal" id="resForm" novalidate>
+      <div id="resFields">
+        <div class="field">
+          <span class="lbl" data-i18n="type">Typ rezervácie</span>
+          <div class="areas" id="types">
+            <label><input type="radio" name="type" value="table" checked><span>🍽️</span><b data-i18n="t1">Stôl</b></label>
+            <label><input type="radio" name="type" value="event"><span>🎉</span><b data-i18n="t2">Oslava</b></label>
+            <label><input type="radio" name="type" value="company"><span>💼</span><b data-i18n="t3">Firma</b></label>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="date" data-i18n="date">Dátum</label><input type="date" id="date" required></div>
+          <div class="field"><span class="lbl" data-i18n="guests">Počet osôb</span>
+            <div class="stepper"><button type="button" id="minus" aria-label="Menej">−</button><output id="guests">2</output><button type="button" id="plus" aria-label="Viac">+</button></div>
+          </div>
+        </div>
+        <div class="field"><span class="lbl" data-i18n="time">Čas</span><div class="slots" id="slots"></div></div>
+        <div class="field"><span class="lbl" data-i18n="area">Kde chcete sedieť?</span>
+          <div class="areas">
+            <label><input type="radio" name="area" value="in" checked><span>🏠</span><b data-i18n="a1">Vnútri</b></label>
+            <label><input type="radio" name="area" value="terrace"><span>🌺</span><b data-i18n="a2">Terasa</b></label>
+            <label><input type="radio" name="area" value="koliba"><span>🔥</span><b data-i18n="a3">Koliba</b></label>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="name" data-i18n="name">Meno a priezvisko</label><input id="name" autocomplete="name" required></div>
+          <div class="field"><label for="phone" data-i18n="phone">Telefón</label><input id="phone" type="tel" autocomplete="tel" placeholder="+421 …" required></div>
+        </div>
+        <div class="field"><label for="email">E-mail</label><input id="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="note" data-i18n="noteL">Poznámka (alergie, detská stolička, oslava…)</label><textarea id="note" rows="3"></textarea></div>
+        <label class="consent"><input type="checkbox" id="gdpr" required><span data-i18n="gdpr">Súhlasím so spracovaním osobných údajov za účelom vybavenia rezervácie.</span></label>
+        <button class="btn btn-primary" style="width:100%" type="submit"><span data-i18n="send">Odoslať rezerváciu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="success" id="success" aria-live="polite">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 class="serif" style="font-size:1.8rem" data-i18n="thanks">Ďakujeme!</h3>
+        <p style="color:var(--muted)" data-i18n="thanksT">Vašu žiadosť sme prijali. Čoskoro vám ju potvrdíme.</p>
+        <div class="summary" id="summary"></div>
+        <button type="button" class="btn btn-line" id="again" data-i18n="again">Nová rezervácia</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="faqEyebrow">Časté otázky</span>
+      <h2 data-i18n-html="faqTitle">Dobré <em>vedieť</em></h2>
+      <p class="lead" data-i18n="faqText">Nenašli ste odpoveď? Zavolajte nám, radi poradíme.</p>
+    </div>
+    <div class="reveal">
+      <details open><summary data-i18n="q1">Do kedy podávate denné menu?</summary><p data-i18n="a1q">Obedové menu podávame v pracovné dni od 11:00 do 14:00, prípadne do vypredania. V rovnakom čase ho aj rozvážame.</p></details>
+      <details><summary data-i18n="q2">Je terasa otvorená celý rok?</summary><p data-i18n="a2q">Terasa, koliba s grilom a sedenie pri jazierku sú k dispozícii počas letnej sezóny. Vnútri máme 45 miest po celý rok.</p></details>
+      <details><summary data-i18n="q3">Môžem si u vás zorganizovať oslavu?</summary><p data-i18n="a3q">Áno – svadby, krstiny, jubileá, firemné akcie aj kary. Pošlite nám nezáväzný dopyt cez rezervačný formulár a ozveme sa s ponukou menu.</p></details>
+      <details><summary data-i18n="q4">Máte jedlá pre alergikov?</summary><p data-i18n="a4q">Pri každom jedle uvádzame alergény. Ak potrebujete úpravu, povedzte to obsluhe – radi vám vyhovieme.</p></details>
+      <details><summary data-i18n="q5">Ako vás nájdem?</summary><p data-i18n="a5q">Sme na Sasinkovej 28, v širšom centre Piešťan, pár minút pešo od kúpeľného ostrova a centra mesta.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="cEyebrow">Kontakt</span>
+      <h2 data-i18n-html="cTitle">Tešíme sa <em>na vás</em></h2>
+    </div>
+    <div class="contact-grid" style="margin-top:2rem">
+      <div class="c-card reveal">
+        <div class="c-line"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small data-i18n="addr">Adresa</small><a href="https://maps.google.com/?q=Sasinkova+28,+921+01+Pie%C5%A1%C5%A5any" target="_blank" rel="noopener">Sasinkova 28, 921 01 Piešťany</a></div></div>
+        <div class="c-line"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><div><small data-i18n="phone">Telefón</small><a href="tel:+421948037380">+421 948 037 380</a></div></div>
+        <div class="c-line"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div><small>E-mail</small><a href="mailto:info@restauraciamuskat.sk">info@restauraciamuskat.sk</a></div></div>
+        <h3 class="serif" style="margin-top:1.4rem;font-size:1.3rem" data-i18n="hoursT">Otváracie hodiny</h3>
+        <table class="hours" id="hours"></table>
+        <div class="socials">
+          <a href="https://www.facebook.com/p/Re%C5%A1taur%C3%A1cia-Mu%C5%A1k%C3%A1t-100057064675356/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+          <a href="https://maps.google.com/?q=Sasinkova+28,+921+01+Pie%C5%A1%C5%A5any" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Mapa – Reštaurácia Muškát" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Sasinkova%2028%2C%20921%2001%20Pie%C5%A1%C5%A5any&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- NEWSLETTER + FOOTER -->
+<div class="wrap">
+  <div class="news reveal">
+    <div>
+      <h3 data-i18n="nlT">Denné menu každé ráno vo vašom e-maile</h3>
+      <p data-i18n="nlText">Prihláste sa a nezmeškajte ani špeciálne akcie, grilovačky na terase a sezónne menu.</p>
+    </div>
+    <form id="nlForm"><input type="email" required placeholder="vas@email.sk" aria-label="E-mail"><button class="btn" data-i18n="nlBtn">Odoberať</button></form>
+  </div>
+</div>
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#" class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#b3263e"/><g fill="#fff"><circle cx="32" cy="21" r="7.5"/><circle cx="21" cy="31" r="7.5"/><circle cx="43" cy="31" r="7.5"/><circle cx="26" cy="43" r="7.5"/><circle cx="38" cy="43" r="7.5"/></g><circle cx="32" cy="33" r="4.5" fill="#e9b949"/></svg><span><b>MUŠKÁT</b><small data-i18n="logoSub">Reštaurácia · Piešťany</small></span></a>
+        <p style="margin-top:1rem;font-size:.92rem;max-width:34ch" data-i18n="fAbout">Rodinná reštaurácia so slovenskou a medzinárodnou kuchyňou, letnou terasou a kolibou v Piešťanoch.</p>
+      </div>
+      <div><h4 data-i18n="fNav">Navigácia</h4><ul><li><a href="#denne-menu" data-i18n="nav1">Denné menu</a></li><li><a href="#jedalny-listok" data-i18n="nav2">Jedálny lístok</a></li><li><a href="#terasa" data-i18n="nav3">Terasa & koliba</a></li><li><a href="#oslavy" data-i18n="nav4">Oslavy</a></li></ul></div>
+      <div><h4 data-i18n="fServ">Služby</h4><ul><li><a href="#rezervacia" data-i18n="ctaReserve">Rezervovať stôl</a></li><li><a href="#rozvoz" data-i18n="s1">Rozvoz obedov</a></li><li><a href="#rozvoz" data-i18n="s2">Darčekové poukážky</a></li><li><a href="#faq" data-i18n="faqEyebrow">Časté otázky</a></li></ul></div>
+      <div><h4 data-i18n="cEyebrow">Kontakt</h4><ul><li>Sasinkova 28</li><li>921 01 Piešťany</li><li><a href="tel:+421948037380">+421 948 037 380</a></li><li><a href="mailto:info@restauraciamuskat.sk">info@restauraciamuskat.sk</a></li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© <span id="yr"></span> MUŠKÁT s.r.o. · <span data-i18n="rights">Všetky práva vyhradené.</span></span><span><a href="#" data-i18n="privacy">Ochrana osobných údajov</a> · <a href="#" data-i18n="cookies">Cookies</a></span></div>
+  </div>
+</footer>
+
+<!-- MOBILE ACTION BAR -->
+<nav class="mbar" aria-label="Rýchle akcie">
+  <a href="tel:+421948037380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-i18n="mCall">Zavolať</span></a>
+  <a href="https://maps.google.com/?daddr=Sasinkova+28,+921+01+Pie%C5%A1%C5%A5any" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 19-9-9 19-2-8-8-2z"/></svg><span data-i18n="mNav">Navigovať</span></a>
+  <a href="#rezervacia" class="main"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="mRes">Rezervovať</span></a>
+</nav>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Galéria">
+  <button class="lb-close" id="lbClose" aria-label="Zavrieť">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Predchádzajúca">‹</button>
+  <div><div class="img" id="lbImg"></div><p id="lbCap"></p></div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Ďalšia">›</button>
+</div>
+
+<dialog id="allgDlg"><div class="dlg">
+  <h3 data-i18n="allgList">Zoznam alergénov</h3>
+  <ol id="allgOl"></ol>
+  <button class="btn btn-primary" onclick="this.closest('dialog').close()" data-i18n="close">Zavrieť</button>
+</div></dialog>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const U = (id, w=900) => `url('https://images.unsplash.com/${id}?w=${w}&q=80')`;
+let lang = 'sk';
+try { lang = localStorage.getItem('muskat-lang') || (navigator.language||'sk').slice(0,2); } catch(e){}
+if (!['sk','en','de'].includes(lang)) lang = (navigator.language||'').startsWith('cs') ? 'sk' : 'en';
+
+/* ---------- i18n ---------- */
+const T = {
+en:{skip:"Skip to content",logoSub:"Restaurant · Piešťany",nav1:"Lunch menu",nav2:"Menu",nav3:"Terrace & lodge",nav4:"Celebrations",nav5:"Delivery",nav6:"Contact",ctaReserve:"Book a table",
+heroEyebrow:"Family restaurant in the spa town of Piešťany",heroTitle:"Honest cooking,<br><em>a garden full</em> of geraniums.",heroText:"Slovak classics and international specialities, a daily lunch menu and a summer terrace with a grill lodge by the garden pond. Close to the centre, far from the rush.",heroMenu:"See the menu",todayMenu:"Today's lunch menu",fullWeek:"Whole week →",
+mq1:"Daily lunch menu",mq2:"Summer terrace",mq3:"Grill lodge",mq4:"Seating by the pond",mq5:"Family celebrations",mq6:"Lunch delivery",seats:"seats",
+aboutEyebrow:"About us",aboutTitle:"A place you'll <em>love coming back to</em>",aboutText:"Muškát is a family restaurant in the wider centre of Piešťany. We cook what we love ourselves – honest Slovak dishes, grilled steaks, fresh fish and seasonal specialities. On weekdays we serve a quick, tasty lunch; at weekends, time with family and friends.",f1:"Slovak and international cuisine with culinary specialities",f2:"Terrace with rattan furniture, greenery and, of course, geraniums",f3:"Stylish lodge with a grill and seating by the garden pond",st1:"seats inside",st2:"seats on the terrace",st3:"open every day",
+dailyEyebrow:"Monday – Friday · 11:00 – 14:00",dailyTitle:"Daily <em>lunch</em> menu",dailyText:"A soup and a choice of mains every day. Eat in, take away or have your lunch delivered.",share:"Share menu",delivery:"Lunch delivery",deliveryTitle:"Lunch delivered to your office",deliveryText:"We take orders by phone and deliver at lunchtime.",deliveryHint:"Order by 10:30 to be sure.",orderCall:"Order by phone",allgNote:"Numbers next to dishes indicate allergens. Ask us any time.",
+carteEyebrow:"À la carte",carteTitle:"Our <em>menu</em>",carteText:"From bruschetta to start to beef steak with herb butter. Filter by taste and dietary needs.",search:"Search dishes…",fV:"🌱 Vegetarian",fGF:"🌾 Gluten-free",fChef:"⭐ Recommended",allgList:"Allergen list",
+galEyebrow:"Summer season",galTitle:"Terrace, lodge <em>and pond</em>",galText:"When it gets warm, life moves outside. Sit on the courtyard terrace, in the lodge with its stylish grill, or by the garden pond.",
+evEyebrow:"Celebrations & events",evTitle:"Your special moments, <em>our care</em>",evText:"We host family celebrations, corporate parties and weddings. Leave the tailored menu, decoration and service to us.",evCta:"Send an enquiry",ev1:"Weddings",ev1t:"Intimate weddings and feasts in a garden setting.",ev2:"Christenings & birthdays",ev2t:"Family celebrations with everything that goes with them.",ev3:"Corporate events",ev3t:"Parties, business lunches and team-building by the grill.",
+s1:"Lunch delivery",s1t:"We deliver the daily menu right to you in Piešťany.",s1a:"Pick from the daily menu",s1b:"Call 0948 037 380",s1c:"We deliver 11:00 – 14:00",s2:"Gift vouchers",s2t:"Give an experience. We'll prepare a voucher of any value by the next day.",voucher:"Gift voucher",s3:"Breakfast & coffee",s3t:"We open at 9:30 – drop by for coffee, dessert or a late breakfast after your spa treatments.",s3c:"Drinks menu",
+resEyebrow:"Online booking",resTitle:"Book a <em>table</em>",resText:"Choose the date, time and where you'd like to sit. We'll confirm by e-mail or phone. For groups over 12, please contact us directly.",type:"Booking type",t1:"Table",t2:"Celebration",t3:"Company",date:"Date",guests:"Guests",time:"Time",area:"Where would you like to sit?",a1:"Inside",a2:"Terrace",a3:"Lodge",name:"Full name",phone:"Phone",noteL:"Note (allergies, high chair, celebration…)",gdpr:"I agree to the processing of my personal data for the purpose of this booking.",send:"Send booking",thanks:"Thank you!",thanksT:"We've received your request and will confirm it shortly.",again:"New booking",
+faqEyebrow:"FAQ",faqTitle:"Good <em>to know</em>",faqText:"Didn't find an answer? Give us a call.",q1:"Until when do you serve the lunch menu?",a1q:"We serve the lunch menu on weekdays from 11:00 to 14:00 or while stocks last, and deliver it at the same time.",q2:"Is the terrace open all year?",a2q:"The terrace, grill lodge and pond seating are available during the summer season. Inside we have 45 seats all year round.",q3:"Can I hold a celebration with you?",a3q:"Yes – weddings, christenings, birthdays, corporate events and wakes. Send a no-obligation enquiry via the booking form and we'll come back with a menu offer.",q4:"Do you cater for allergies?",a4q:"We list allergens for every dish. If you need an adjustment, just tell our staff.",q5:"How do I find you?",a5q:"We're at Sasinkova 28 in the wider centre of Piešťany, a few minutes' walk from the Spa Island and the town centre.",
+cEyebrow:"Contact",cTitle:"We look forward <em>to seeing you</em>",addr:"Address",hoursT:"Opening hours",nlT:"The daily menu in your inbox every morning",nlText:"Sign up and never miss special offers, terrace barbecues or seasonal menus.",nlBtn:"Subscribe",fAbout:"Family restaurant with Slovak and international cuisine, a summer terrace and grill lodge in Piešťany.",fNav:"Navigation",fServ:"Services",rights:"All rights reserved.",privacy:"Privacy policy",cookies:"Cookies",mCall:"Call",mNav:"Directions",mRes:"Book",close:"Close",
+open:"Open now · until",closed:"Closed · opens",today:"today",soup:"Soup",days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],weekend:"The lunch menu is served Monday to Friday. See you on Monday!",copied:"Link copied",sent:"Thank you! You're subscribed.",fill:"Please fill in the required fields",noRes:"Nothing found. Try another search.",all:"All"},
+de:{skip:"Zum Inhalt",logoSub:"Restaurant · Piešťany",nav1:"Mittagsmenü",nav2:"Speisekarte",nav3:"Terrasse & Hütte",nav4:"Feiern",nav5:"Lieferung",nav6:"Kontakt",ctaReserve:"Tisch reservieren",
+heroEyebrow:"Familienrestaurant im Kurort Piešťany",heroTitle:"Ehrliche Küche,<br><em>ein Garten voller</em> Geranien.",heroText:"Slowakische Klassiker und internationale Spezialitäten, ein tägliches Mittagsmenü und eine Sommerterrasse mit Grillhütte am Gartenteich. Nah am Zentrum, fern vom Trubel.",heroMenu:"Speisekarte ansehen",todayMenu:"Heutiges Mittagsmenü",fullWeek:"Ganze Woche →",
+mq1:"Tägliches Mittagsmenü",mq2:"Sommerterrasse",mq3:"Grillhütte",mq4:"Sitzplätze am Teich",mq5:"Familienfeiern",mq6:"Mittagslieferung",seats:"Sitzplätze",
+aboutEyebrow:"Über uns",aboutTitle:"Ein Ort, an den man <em>gern zurückkehrt</em>",aboutText:"Muškát ist ein Familienrestaurant im erweiterten Zentrum von Piešťany. Wir kochen, was wir selbst lieben – ehrliche slowakische Gerichte, Steaks vom Grill, frischen Fisch und saisonale Spezialitäten. Unter der Woche ein schnelles, leckeres Mittagessen, am Wochenende gemütliche Stunden mit Familie und Freunden.",f1:"Slowakische und internationale Küche mit kulinarischen Spezialitäten",f2:"Terrasse mit Rattanmöbeln, viel Grün und natürlich Geranien",f3:"Stilvolle Hütte mit Grill und Sitzplätze am Gartenteich",st1:"Plätze innen",st2:"Plätze auf der Terrasse",st3:"täglich geöffnet",
+dailyEyebrow:"Montag – Freitag · 11:00 – 14:00",dailyTitle:"Tägliches <em>Mittags</em>menü",dailyText:"Jeden Tag eine Suppe und mehrere Hauptgerichte zur Auswahl. Vor Ort, zum Mitnehmen oder geliefert.",share:"Menü teilen",delivery:"Mittagslieferung",deliveryTitle:"Mittagessen direkt ins Büro",deliveryText:"Bestellungen telefonisch, Lieferung zur Mittagszeit.",deliveryHint:"Bis 10:30 bestellen und sicher sein.",orderCall:"Telefonisch bestellen",allgNote:"Die Zahlen bei den Gerichten kennzeichnen Allergene. Fragen Sie uns gern.",
+carteEyebrow:"À la carte",carteTitle:"Unsere <em>Speisekarte</em>",carteText:"Von Bruschetta als Vorspeise bis zum Rindersteak mit Kräuterbutter. Filtern Sie nach Geschmack und Ernährung.",search:"Gericht suchen…",fV:"🌱 Vegetarisch",fGF:"🌾 Glutenfrei",fChef:"⭐ Empfehlung",allgList:"Allergenliste",
+galEyebrow:"Sommersaison",galTitle:"Terrasse, Hütte <em>und Teich</em>",galText:"Wenn es warm wird, spielt sich das Leben draußen ab. Sitzen Sie auf der Hofterrasse, in der Hütte mit stilvollem Grill oder am Gartenteich.",
+evEyebrow:"Feiern & Events",evTitle:"Ihre besonderen Momente, <em>unsere Sorge</em>",evText:"Wir richten Familienfeiern, Firmenfeste und Hochzeiten aus. Menü nach Maß, Dekoration und Service übernehmen wir.",evCta:"Unverbindliche Anfrage",ev1:"Hochzeiten",ev1t:"Kleinere Hochzeiten und Feste im Gartenambiente.",ev2:"Taufen & Jubiläen",ev2t:"Familienfeiern mit allem, was dazugehört.",ev3:"Firmenevents",ev3t:"Feiern, Geschäftsessen und Teambuilding am Grill.",
+s1:"Mittagslieferung",s1t:"Wir liefern das Tagesmenü in Piešťany direkt zu Ihnen.",s1a:"Wählen Sie aus dem Tagesmenü",s1b:"Rufen Sie 0948 037 380 an",s1c:"Lieferung 11:00 – 14:00",s2:"Geschenkgutscheine",s2t:"Schenken Sie ein Erlebnis. Gutscheine in beliebiger Höhe bis zum nächsten Tag.",voucher:"Geschenkgutschein",s3:"Frühstück & Kaffee",s3t:"Wir öffnen schon um 9:30 – kommen Sie auf einen Kaffee, ein Dessert oder ein spätes Frühstück nach Ihren Kuranwendungen.",s3c:"Getränkekarte",
+resEyebrow:"Online-Reservierung",resTitle:"Reservieren Sie <em>einen Tisch</em>",resText:"Wählen Sie Datum, Uhrzeit und Ihren Lieblingsplatz. Wir bestätigen per E-Mail oder Telefon. Für Gruppen über 12 Personen kontaktieren Sie uns bitte direkt.",type:"Art der Reservierung",t1:"Tisch",t2:"Feier",t3:"Firma",date:"Datum",guests:"Personen",time:"Uhrzeit",area:"Wo möchten Sie sitzen?",a1:"Innen",a2:"Terrasse",a3:"Hütte",name:"Vor- und Nachname",phone:"Telefon",noteL:"Anmerkung (Allergien, Kinderstuhl, Feier…)",gdpr:"Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Reservierung zu.",send:"Reservierung senden",thanks:"Vielen Dank!",thanksT:"Wir haben Ihre Anfrage erhalten und bestätigen sie in Kürze.",again:"Neue Reservierung",
+faqEyebrow:"Häufige Fragen",faqTitle:"Gut <em>zu wissen</em>",faqText:"Keine Antwort gefunden? Rufen Sie uns an.",q1:"Bis wann gibt es das Mittagsmenü?",a1q:"Werktags von 11:00 bis 14:00 bzw. solange der Vorrat reicht – zur gleichen Zeit liefern wir auch.",q2:"Ist die Terrasse ganzjährig geöffnet?",a2q:"Terrasse, Grillhütte und Plätze am Teich stehen in der Sommersaison zur Verfügung. Innen haben wir ganzjährig 45 Plätze.",q3:"Kann ich bei Ihnen feiern?",a3q:"Ja – Hochzeiten, Taufen, Jubiläen, Firmenfeiern und Trauerfeiern. Senden Sie uns eine unverbindliche Anfrage über das Formular.",q4:"Gibt es Gerichte für Allergiker?",a4q:"Bei jedem Gericht sind die Allergene angegeben. Sagen Sie dem Personal Bescheid, wenn Sie eine Anpassung wünschen.",q5:"Wie finde ich Sie?",a5q:"Sasinkova 28, im erweiterten Zentrum von Piešťany, wenige Gehminuten von der Kurinsel und der Innenstadt.",
+cEyebrow:"Kontakt",cTitle:"Wir freuen uns <em>auf Sie</em>",addr:"Adresse",hoursT:"Öffnungszeiten",nlT:"Das Tagesmenü jeden Morgen in Ihrem Postfach",nlText:"Melden Sie sich an und verpassen Sie keine Aktionen, Grillabende und Saisonmenüs.",nlBtn:"Abonnieren",fAbout:"Familienrestaurant mit slowakischer und internationaler Küche, Sommerterrasse und Grillhütte in Piešťany.",fNav:"Navigation",fServ:"Leistungen",rights:"Alle Rechte vorbehalten.",privacy:"Datenschutz",cookies:"Cookies",mCall:"Anrufen",mNav:"Route",mRes:"Reservieren",close:"Schließen",
+open:"Jetzt geöffnet · bis",closed:"Geschlossen · öffnet",today:"heute",soup:"Suppe",days:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],weekend:"Das Mittagsmenü gibt es Montag bis Freitag. Bis Montag!",copied:"Link kopiert",sent:"Danke! Sie sind angemeldet.",fill:"Bitte füllen Sie die Pflichtfelder aus",noRes:"Nichts gefunden. Versuchen Sie einen anderen Begriff.",all:"Alle"},
+sk:{open:"Otvorené · do",closed:"Zatvorené · otvárame",today:"dnes",soup:"Polievka",days:["Nedeľa","Pondelok","Utorok","Streda","Štvrtok","Piatok","Sobota"],weekend:"Obedové menu podávame od pondelka do piatku. Tešíme sa v pondelok!",copied:"Odkaz skopírovaný",sent:"Ďakujeme! Ste prihlásený/á.",fill:"Vyplňte prosím povinné polia",noRes:"Nič sme nenašli. Skúste iné slovo.",all:"Všetko"}
+};
+// Capture Slovak originals from the DOM
+$$('[data-i18n]').forEach(el => T.sk[el.dataset.i18n] ??= el.textContent);
+$$('[data-i18n-html]').forEach(el => T.sk[el.dataset.i18nHtml] ??= el.innerHTML);
+$$('[data-i18n-ph]').forEach(el => T.sk[el.dataset.i18nPh] ??= el.placeholder);
+const t = k => (T[lang] && T[lang][k]) ?? T.sk[k] ?? k;
+const L = o => typeof o === 'string' ? o : (o[lang] || o.sk);
+
+/* ---------- hours & status ---------- */
+// index = JS day (0=Sun)
+const HOURS = [[9.5,22],[9.5,22],[9.5,22],[9.5,22],[9.5,22],[9.5,23],[10,23]];
+const fmt = h => `${Math.floor(h)}:${String(Math.round(h%1*60)).padStart(2,'0')}`;
+function renderStatus(){
+  const n = new Date(), d = n.getDay(), h = n.getHours()+n.getMinutes()/60, [o,c] = HOURS[d];
+  const isOpen = h>=o && h<c;
+  $('#statusDot').classList.toggle('closed', !isOpen);
+  if (isOpen) $('#statusText').textContent = `${t('open')} ${fmt(c)}`;
+  else { const nd = h<o ? d : (d+1)%7; $('#statusText').textContent = `${t('closed')} ${h<o ? t('today') : t('days')[nd].toLowerCase()} ${fmt(HOURS[nd][0])}`; }
+  const order=[1,2,3,4,5,6,0];
+  $('#hours').innerHTML = order.map(i=>`<tr class="${i===d?'today':''}"><td>${t('days')[i]}</td><td>${fmt(HOURS[i][0])} – ${fmt(HOURS[i][1])}</td></tr>`).join('');
+}
+
+/* ---------- daily menu (sample – edit weekly) ---------- */
+const DAILY_PRICE = '8,90 €';
+const DAILY = {
+1:{soup:{sk:"Hovädzí vývar s rezancami a zeleninou",en:"Beef broth with noodles and vegetables",de:"Rinderbrühe mit Nudeln und Gemüse"},a:"1,3,9",mains:[
+ [{sk:"Kurací rezeň, zemiaková kaša, uhorkový šalát",en:"Chicken schnitzel, mashed potatoes, cucumber salad",de:"Hähnchenschnitzel, Kartoffelpüree, Gurkensalat"},"1,3,7"],
+ [{sk:"Bravčový guláš, domáca knedľa",en:"Pork goulash, homemade dumpling",de:"Schweinegulasch, hausgemachter Knödel"},"1,3,7"],
+ [{sk:"Cestoviny s pestom, cherry paradajky, parmezán",en:"Pasta with pesto, cherry tomatoes, parmesan",de:"Pasta mit Pesto, Kirschtomaten, Parmesan"},"1,7,8"],
+ [{sk:"Šalát s grilovaným kuracím mäsom a dresingom",en:"Salad with grilled chicken and dressing",de:"Salat mit gegrilltem Hähnchen und Dressing"},"3,10"]]},
+2:{soup:{sk:"Kapustnica s klobásou",en:"Sauerkraut soup with sausage",de:"Krautsuppe mit Wurst"},a:"1,9",mains:[
+ [{sk:"Sviečková na smotane, karlovarská knedľa",en:"Beef sirloin in cream sauce, bread dumpling",de:"Lendenbraten in Sahnesauce, Semmelknödel"},"1,3,7,9"],
+ [{sk:"Bryndzové halušky so slaninkou",en:"Bryndza gnocchi with bacon",de:"Brimsennocken mit Speck"},"1,3,7"],
+ [{sk:"Vyprážaný syr, varené zemiaky, tatárska omáčka",en:"Fried cheese, boiled potatoes, tartar sauce",de:"Gebackener Käse, Salzkartoffeln, Remoulade"},"1,3,7,10"],
+ [{sk:"Kuracie prsia na grile, dusená ryža, zelenina",en:"Grilled chicken breast, rice, vegetables",de:"Gegrillte Hähnchenbrust, Reis, Gemüse"},"7"]]},
+3:{soup:{sk:"Šošovicová polievka s párkom",en:"Lentil soup with sausage",de:"Linsensuppe mit Würstchen"},a:"1,9",mains:[
+ [{sk:"Pečené kuracie stehno, ryža, kompót",en:"Roast chicken leg, rice, compote",de:"Gebratene Hähnchenkeule, Reis, Kompott"},""],
+ [{sk:"Segedínsky guláš, knedľa",en:"Szeged goulash, dumpling",de:"Szegediner Gulasch, Knödel"},"1,3,7"],
+ [{sk:"Zapekané rizoto s hríbmi a syrom",en:"Baked mushroom risotto with cheese",de:"Überbackenes Pilzrisotto mit Käse"},"7,9"],
+ [{sk:"Grilovaný pstruh, maslové zemiaky",en:"Grilled trout, buttered potatoes",de:"Gegrillte Forelle, Butterkartoffeln"},"4,7"]]},
+4:{soup:{sk:"Paradajková polievka s bazalkou",en:"Tomato soup with basil",de:"Tomatensuppe mit Basilikum"},a:"7,9",mains:[
+ [{sk:"Bravčový rezeň, zemiakový šalát",en:"Pork schnitzel, potato salad",de:"Schweineschnitzel, Kartoffelsalat"},"1,3,10"],
+ [{sk:"Hovädzie na hubách, tarhoňa",en:"Beef with mushrooms, egg barley",de:"Rind mit Pilzen, Eiergraupen"},"1,3,9"],
+ [{sk:"Zemiakové placky s kyslou smotanou",en:"Potato pancakes with sour cream",de:"Kartoffelpuffer mit Sauerrahm"},"1,3,7"],
+ [{sk:"Caesar šalát s kuracím mäsom",en:"Chicken Caesar salad",de:"Caesar Salad mit Hähnchen"},"1,3,4,7"]]},
+5:{soup:{sk:"Fazuľová polievka na kyslo",en:"Sour bean soup",de:"Saure Bohnensuppe"},a:"1,7",mains:[
+ [{sk:"Vyprážaný kurací rezeň, hranolky",en:"Fried chicken schnitzel, fries",de:"Gebackenes Hähnchenschnitzel, Pommes"},"1,3"],
+ [{sk:"Pečená kačica, červená kapusta, lokše",en:"Roast duck, red cabbage, potato pancakes",de:"Entenbraten, Rotkraut, Kartoffelfladen"},"1"],
+ [{sk:"Ovocné knedle so strúhankou a maslom",en:"Fruit dumplings with breadcrumbs and butter",de:"Obstknödel mit Bröseln und Butter"},"1,3,7"],
+ [{sk:"Steak z lososa, grilovaná zelenina",en:"Salmon steak, grilled vegetables",de:"Lachssteak, Grillgemüse"},"4"]]}
+};
+
+let dayActive;
+function renderDays(){
+  const today = new Date().getDay();
+  if (dayActive === undefined) dayActive = (today>=1 && today<=5) ? today : 1;
+  $('#days').innerHTML = [1,2,3,4,5].map(d=>{
+    const dt = new Date(); dt.setDate(dt.getDate() + (d - (today||7)));
+    return `<button role="tab" aria-selected="${d===dayActive}" class="${d===dayActive?'on':''}" data-d="${d}">${d===today?`<span class="today">${t('today')}</span>`:''}${t('days')[d].slice(0,lang==='sk'?2:3)}<small>${dt.getDate()}. ${dt.getMonth()+1}.</small></button>`;
+  }).join('');
+  const m = DAILY[dayActive];
+  $('#dailyList').innerHTML = `<div class="dish"><span class="num">P</span><div><h4>${L(m.soup)}<span class="allg">(${m.a})</span></h4><p>${t('soup')} · 0,33 l</p></div><span class="pr"></span></div>`+
+    m.mains.map((x,i)=>`<div class="dish"><span class="num">${i+1}</span><div><h4>${L(x[0])}${x[1]?`<span class="allg">(${x[1]})</span>`:''}</h4></div><span class="pr">${DAILY_PRICE}</span></div>`).join('');
+  const hd = (today>=1&&today<=5) ? DAILY[today] : null;
+  $('#heroDaily').innerHTML = hd ? `<li><b>P</b>${L(hd.soup)}</li>` + hd.mains.map((x,i)=>`<li><b>${i+1}</b>${L(x[0])}</li>`).join('') : `<li>${t('weekend')}</li>`;
+}
+$('#days').addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b) return; dayActive=+b.dataset.d; renderDays(); });
+
+/* ---------- à la carte ---------- */
+const CATS = [
+ {id:'all'},{id:'starter',sk:'Predjedlá',en:'Starters',de:'Vorspeisen'},{id:'soup',sk:'Polievky',en:'Soups',de:'Suppen'},
+ {id:'grill',sk:'Z grilu',en:'From the grill',de:'Vom Grill'},{id:'slovak',sk:'Slovenské',en:'Slovak',de:'Slowakisch'},
+ {id:'fish',sk:'Ryby',en:'Fish',de:'Fisch'},{id:'salad',sk:'Šaláty',en:'Salads',de:'Salate'},{id:'dessert',sk:'Dezerty',en:'Desserts',de:'Desserts'}];
+const MENU = [
+ {c:'starter',n:{sk:'Bruschetta s hríbikmi a cuketou',en:'Bruschetta with mushrooms and courgette',de:'Bruschetta mit Pilzen und Zucchini'},d:{sk:'hobliny parmezánu, olivový olej',en:'parmesan shavings, olive oil',de:'Parmesanspäne, Olivenöl'},p:'3,20',w:'150 g',t:['v'],a:'1,7',img:'photo-1572695157366-5e585ab2b69f'},
+ {c:'starter',n:{sk:'Tatarák z hovädzej sviečkovice',en:'Beef tenderloin tartare',de:'Rindertatar vom Filet'},d:{sk:'opekaný chlebík, cesnak',en:'toast, garlic',de:'Röstbrot, Knoblauch'},p:'12,90',w:'120 g',t:['chef'],a:'1,3,10',img:'photo-1608877907149-a206d75ba011'},
+ {c:'soup',n:{sk:'Polievka šéfkuchára',en:"Chef's soup of the day",de:'Suppe des Küchenchefs'},d:{sk:'podľa dennej ponuky',en:'ask your server',de:'laut Tagesangebot'},p:'1,50',w:'0,33 l',t:[],a:'1,9',img:'photo-1547592180-85f173990554'},
+ {c:'soup',n:{sk:'Cesnaková polievka v chlebovom bochníku',en:'Garlic soup in a bread bowl',de:'Knoblauchsuppe im Brotlaib'},d:{sk:'syr, krutóny',en:'cheese, croutons',de:'Käse, Croûtons'},p:'4,90',w:'0,33 l',t:['v'],a:'1,7',img:'photo-1476718406336-bb5a9690ee2a'},
+ {c:'grill',n:{sk:'Hovädzí steak s bylinkovým maslom',en:'Beef steak with herb butter',de:'Rindersteak mit Kräuterbutter'},d:{sk:'z vysokej roštenky, opekané zemiaky',en:'rib-eye, roast potatoes',de:'Hochrippe, Röstkartoffeln'},p:'20,90',w:'250 g',t:['gf','chef'],a:'7',img:'photo-1600891964092-4316c288032e'},
+ {c:'grill',n:{sk:'Bravčová panenka „Muškát"',en:'Pork tenderloin "Muškát"',de:'Schweinefilet „Muškát"'},d:{sk:'slaninka, hríbová omáčka, americké zemiaky',en:'bacon, porcini sauce, potato wedges',de:'Speck, Pilzsauce, Kartoffelspalten'},p:'14,50',w:'200 g',t:['chef'],a:'7',img:'photo-1544025162-d76694265947'},
+ {c:'grill',n:{sk:'Grilované rebierka v medovej marináde',en:'Grilled ribs in honey marinade',de:'Gegrillte Rippchen in Honigmarinade'},d:{sk:'chlieb, chren, horčica',en:'bread, horseradish, mustard',de:'Brot, Meerrettich, Senf'},p:'15,90',w:'600 g',t:[],a:'1,10',img:'photo-1529193591184-b1d58069ecdd'},
+ {c:'slovak',n:{sk:'Bryndzové halušky so slaninkou',en:'Bryndza gnocchi with bacon',de:'Brimsennocken mit Speck'},d:{sk:'zakysanka',en:'buttermilk',de:'Sauermilch'},p:'8,90',w:'350 g',t:['chef'],a:'1,3,7',img:'photo-1551183053-bf91a1d81141'},
+ {c:'slovak',n:{sk:'Vyprážaný bravčový rezeň',en:'Fried pork schnitzel',de:'Gebackenes Schweineschnitzel'},d:{sk:'zemiakový šalát',en:'potato salad',de:'Kartoffelsalat'},p:'10,50',w:'150 g',t:[],a:'1,3,10',img:'photo-1599921841143-819065a55cc6'},
+ {c:'slovak',n:{sk:'Pirohy s bryndzou',en:'Pierogi with bryndza',de:'Piroggen mit Brimsen'},d:{sk:'kyslá smotana, pažítka',en:'sour cream, chives',de:'Sauerrahm, Schnittlauch'},p:'8,50',w:'300 g',t:['v'],a:'1,3,7',img:'photo-1625938145744-e380515399bf'},
+ {c:'fish',n:{sk:'Grilovaný pstruh „Muškát"',en:'Grilled trout "Muškát"',de:'Gegrillte Forelle „Muškát"'},d:{sk:'citrón, bylinky, maslo',en:'lemon, herbs, butter',de:'Zitrone, Kräuter, Butter'},p:'6,10',w:'100 g',t:['gf','chef'],a:'4,7',img:'photo-1535140728325-a4d3707eee61'},
+ {c:'fish',n:{sk:'Steak z lososa',en:'Salmon steak',de:'Lachssteak'},d:{sk:'grilovaná zelenina, citrónové maslo',en:'grilled vegetables, lemon butter',de:'Grillgemüse, Zitronenbutter'},p:'9,90',w:'150 g',t:['gf'],a:'4,7',img:'photo-1467003909585-2f8a72700288'},
+ {c:'salad',n:{sk:'Šalát s kozím syrom',en:'Goat cheese salad',de:'Salat mit Ziegenkäse'},d:{sk:'med, vlašské orechy, rukola',en:'honey, walnuts, rocket',de:'Honig, Walnüsse, Rucola'},p:'9,50',w:'250 g',t:['v','gf'],a:'7,8',img:'photo-1546069901-ba9599a7e63c'},
+ {c:'salad',n:{sk:'Grécky šalát',en:'Greek salad',de:'Griechischer Salat'},d:{sk:'feta, olivy, červená cibuľa',en:'feta, olives, red onion',de:'Feta, Oliven, rote Zwiebel'},p:'7,50',w:'300 g',t:['v','gf'],a:'7',img:'photo-1540189549336-e6e99c3679fe'},
+ {c:'dessert',n:{sk:'Palacinky s lekvárom a orechmi',en:'Pancakes with plum jam and walnuts',de:'Palatschinken mit Pflaumenmus und Nüssen'},d:{sk:'šľahačka',en:'whipped cream',de:'Schlagsahne'},p:'4,90',w:'2 ks',t:['v'],a:'1,3,7,8',img:'photo-1519676867240-f03562e64548'},
+ {c:'dessert',n:{sk:'Domáci čokoládový fondant',en:'Homemade chocolate fondant',de:'Hausgemachter Schokoladenfondant'},d:{sk:'vanilková zmrzlina, lesné ovocie',en:'vanilla ice cream, berries',de:'Vanilleeis, Waldbeeren'},p:'5,50',w:'120 g',t:['v','chef'],a:'1,3,7',img:'photo-1606313564200-e75d5e30476c'}
+];
+let cat='all';
+function renderCats(){
+  $('#cats').innerHTML = CATS.map(c=>`<button class="chip ${c.id===cat?'on':''}" data-c="${c.id}">${c.id==='all'?t('all'):L(c)}</button>`).join('');
+}
+function renderCarte(){
+  const q = $('#q').value.trim().toLowerCase();
+  const f = $$('.filters input:checked').map(i=>i.value);
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  const items = MENU.filter(m => (cat==='all'||m.c===cat) && f.every(x=>m.t.includes(x)) && (!q || norm(L(m.n)+' '+L(m.d)).includes(norm(q))));
+  const lab = {v:'🌱',gf:'🌾 GF',chef:'⭐'};
+  $('#carte').innerHTML = items.length ? items.map(m=>`<article class="item"><div class="thumb" style="background-image:${U(m.img,200)},linear-gradient(135deg,#d99a3d,#8a3a1a)"></div><div><div class="item-top"><h4>${L(m.n)}</h4><span class="fill"></span><span class="pr">${m.p} €</span></div><p>${m.w} · ${L(m.d)} <span class="allg">(${m.a})</span></p><div class="meta">${m.t.map(x=>`<span class="ico ${x}">${lab[x]}</span>`).join('')}</div></div></article>`).join('') : `<p class="empty">${t('noRes')}</p>`;
+}
+$('#cats').addEventListener('click', e=>{const b=e.target.closest('.chip'); if(!b) return; cat=b.dataset.c; renderCats(); renderCarte();});
+$('#q').addEventListener('input', renderCarte);
+$$('.filters input').forEach(i=>i.addEventListener('change', renderCarte));
+
+const ALLG = {sk:['Obilniny s lepkom','Kôrovce','Vajcia','Ryby','Arašidy','Sója','Mlieko','Orechy','Zeler','Horčica','Sezam','Oxid siričitý','Vlčí bôb','Mäkkýše'],
+ en:['Cereals with gluten','Crustaceans','Eggs','Fish','Peanuts','Soy','Milk','Nuts','Celery','Mustard','Sesame','Sulphites','Lupin','Molluscs'],
+ de:['Glutenhaltiges Getreide','Krebstiere','Eier','Fisch','Erdnüsse','Soja','Milch','Schalenfrüchte','Sellerie','Senf','Sesam','Sulfite','Lupinen','Weichtiere']};
+$('#allgBtn').addEventListener('click',()=>{ $('#allgOl').innerHTML = ALLG[lang].map(a=>`<li>${a}</li>`).join(''); $('#allgDlg').showModal(); });
+
+/* ---------- gallery ---------- */
+const GAL = [
+ {img:'photo-1559339352-11d035aa65de',cls:'w2 h2',c:{sk:'Letná terasa',en:'Summer terrace',de:'Sommerterrasse'},s:{sk:'50 miest vo dvore',en:'50 seats in the courtyard',de:'50 Plätze im Hof'}},
+ {img:'photo-1529692236671-f1f6cf9683ba',cls:'',c:{sk:'Koliba s grilom',en:'Grill lodge',de:'Grillhütte'},s:{sk:'grilovačky pod holým nebom',en:'open-air barbecues',de:'Grillen unter freiem Himmel'}},
+ {img:'photo-1414235077428-338989a2e8c0',cls:'',c:{sk:'Z našej kuchyne',en:'From our kitchen',de:'Aus unserer Küche'},s:{sk:'sezónne špeciality',en:'seasonal specialities',de:'Saisonspezialitäten'}},
+ {img:'photo-1501004318641-b39e6451bec6',cls:'',c:{sk:'Záhradné jazierko',en:'Garden pond',de:'Gartenteich'},s:{sk:'pokojné posedenie',en:'a peaceful spot',de:'ruhiges Plätzchen'}},
+ {img:'photo-1517248135467-4c7edcad34c4',cls:'',c:{sk:'Reštaurácia',en:'Dining room',de:'Gastraum'},s:{sk:'45 miest vnútri',en:'45 seats inside',de:'45 Plätze innen'}},
+ {img:'photo-1510812431401-41d2bd2722f3',cls:'w2',c:{sk:'Víno & posedenie',en:'Wine & good company',de:'Wein & Geselligkeit'},s:{sk:'slovenské vína',en:'Slovak wines',de:'Slowakische Weine'}}
+];
+let lbI=0;
+function renderGallery(){
+  $('#bento').innerHTML = GAL.map((g,i)=>`<button class="${g.cls}" data-i="${i}" aria-label="${L(g.c)}"><span class="img" style="background-image:${U(g.img,1100)},linear-gradient(135deg,#3a5d46,#5b1422)"></span><span class="cap">${L(g.c)}<small>${L(g.s)}</small></span></button>`).join('');
+}
+const showLb = i => { lbI=(i+GAL.length)%GAL.length; $('#lbImg').style.backgroundImage=`${U(GAL[lbI].img,1800)},linear-gradient(135deg,#3a5d46,#5b1422)`; $('#lbCap').textContent=L(GAL[lbI].c); $('#lb').classList.add('open'); };
+$('#bento').addEventListener('click',e=>{const b=e.target.closest('button'); if(b) showLb(+b.dataset.i);});
+$('#lbClose').onclick=()=>$('#lb').classList.remove('open');
+$('#lbPrev').onclick=()=>showLb(lbI-1); $('#lbNext').onclick=()=>showLb(lbI+1);
+$('#lb').addEventListener('click',e=>{ if(e.target.id==='lb') $('#lb').classList.remove('open'); });
+document.addEventListener('keydown',e=>{ if(!$('#lb').classList.contains('open')) return; if(e.key==='Escape') $('#lb').classList.remove('open'); if(e.key==='ArrowLeft') showLb(lbI-1); if(e.key==='ArrowRight') showLb(lbI+1); });
+
+/* ---------- reservation ---------- */
+const dateI = $('#date'); const iso = d => d.toISOString().slice(0,10);
+const now = new Date(); dateI.min = iso(now); dateI.value = iso(now);
+const max = new Date(); max.setDate(max.getDate()+90); dateI.max = iso(max);
+let guests=2, slot=null;
+const setG = v => { guests=Math.max(1,Math.min(40,v)); $('#guests').textContent=guests; };
+$('#minus').onclick=()=>setG(guests-1); $('#plus').onclick=()=>setG(guests+1);
+function renderSlots(){
+  const d = new Date(dateI.value+'T00:00'); if (isNaN(d)) return;
+  const [o,c] = HOURS[d.getDay()]; const isToday = dateI.value===iso(new Date());
+  const nowH = new Date().getHours()+new Date().getMinutes()/60;
+  let html=''; for(let h=Math.ceil(Math.max(o,11)*2)/2; h<=c-1.5; h+=0.5){ const dis = isToday && h<=nowH+0.5; html+=`<button type="button" data-h="${h}" ${dis?'disabled':''} class="${slot===h&&!dis?'on':''}">${fmt(h)}</button>`; }
+  $('#slots').innerHTML = html;
+}
+dateI.addEventListener('change',()=>{slot=null;renderSlots();});
+$('#slots').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b||b.disabled) return; slot=+b.dataset.h; renderSlots();});
+$$('a[data-action="event"]').forEach(a=>a.addEventListener('click',()=>{ $('input[name=type][value=event]').checked=true; setG(20); }));
+$('#resForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const req=['#name','#phone','#email']; let ok = slot!==null && $('#gdpr').checked && $('#email').checkValidity();
+  req.forEach(s=>{ const el=$(s); const bad=!el.value.trim(); el.style.borderColor=bad?'var(--red)':''; if(bad) ok=false; });
+  $('#slots').style.outline = slot===null ? '2px solid var(--red)' : ''; $('#slots').style.borderRadius='12px';
+  if(!ok){ toast(t('fill')); return; }
+  const area = $('input[name=area]:checked').closest('label').querySelector('b').textContent;
+  const type = $('input[name=type]:checked').closest('label').querySelector('b').textContent;
+  const dStr = new Date(dateI.value+'T00:00').toLocaleDateString(lang==='sk'?'sk-SK':lang, {weekday:'long',day:'numeric',month:'long'});
+  $('#summary').innerHTML = `<b>${type}</b> · ${guests} × 👤<br>📅 ${dStr}, ${fmt(slot)}<br>📍 ${area}<br>👤 ${$('#name').value}`;
+  // TODO: napojiť na rezervačný systém / e-mail (napr. Formspree, Make, vlastné API)
+  $('#resFields').style.display='none'; $('#success').classList.add('show');
+  $('#rezervacia').scrollIntoView({behavior:'smooth'});
+});
+$('#again').onclick=()=>{ $('#resForm').reset(); slot=null; setG(2); dateI.value=iso(new Date()); renderSlots(); $('#resFields').style.display=''; $('#success').classList.remove('show'); };
+
+/* ---------- misc ---------- */
+function toast(m){ const el=$('#toast'); el.textContent=m; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),2600); }
+$('#nlForm').addEventListener('submit',e=>{ e.preventDefault(); toast(t('sent')); e.target.reset(); });
+$('#shareMenu').addEventListener('click', async ()=>{
+  const url = location.href.split('#')[0]+'#denne-menu';
+  try { if (navigator.share) await navigator.share({title:'Muškát – '+t('nav1'), url}); else { await navigator.clipboard.writeText(url); toast(t('copied')); } } catch(e){}
+});
+$('#yr').textContent = new Date().getFullYear();
+
+const burger=$('#burger'), links=$('#menuLinks');
+burger.onclick=()=>{ const o=links.classList.toggle('open'); burger.setAttribute('aria-expanded',o); };
+links.addEventListener('click',e=>{ if(e.target.tagName==='A'){ links.classList.remove('open'); burger.setAttribute('aria-expanded',false);} });
+addEventListener('scroll',()=>$('#nav').classList.toggle('scrolled',scrollY>20),{passive:true});
+
+// theme
+const root=document.documentElement;
+try{ const th=localStorage.getItem('muskat-theme'); if(th) root.dataset.theme=th; }catch(e){}
+$('#themeBtn').onclick=()=>{ const dark = root.dataset.theme ? root.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches; root.dataset.theme = dark?'light':'dark'; try{localStorage.setItem('muskat-theme',root.dataset.theme);}catch(e){} };
+
+// reveal + counters
+const io = new IntersectionObserver(es=>es.forEach(en=>{ if(!en.isIntersecting) return; en.target.classList.add('in');
+  en.target.querySelectorAll('[data-count]').forEach(c=>{ const end=+c.dataset.count, t0=performance.now(); const step=n=>{ const p=Math.min(1,(n-t0)/1200); c.textContent=Math.round(end*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step); }; requestAnimationFrame(step); });
+  io.unobserve(en.target); }),{threshold:.15});
+$$('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- language ---------- */
+function applyLang(l){
+  lang=l; document.documentElement.lang=l;
+  try{localStorage.setItem('muskat-lang',l);}catch(e){}
+  $$('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  $$('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
+  $$('[data-i18n-html]').forEach(el=>el.innerHTML=t(el.dataset.i18nHtml));
+  $$('[data-i18n-ph]').forEach(el=>el.placeholder=t(el.dataset.i18nPh));
+  renderStatus(); renderDays(); renderCats(); renderCarte(); renderGallery(); renderSlots();
+}
+$$('.lang button').forEach(b=>b.onclick=()=>applyLang(b.dataset.lang));
+applyLang(lang);
+setInterval(renderStatus, 60000);
+})();
+</script>
+</body>
+</html>
